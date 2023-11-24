@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Videos</title>
+</head>
+<body>
+    <h1>YouTube Videos</h1>
+    <ul>
+        {% for video in youtube_videos %}
+            <li>
+                <h3>{{ video.title }}</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.video_id }}" frameborder="0" allowfullscreen></iframe>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
